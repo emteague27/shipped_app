@@ -1,0 +1,5 @@
+
+<%= render :partial => "./jobs/new", locals:{job: @job} %>
+
+<h1 class="table-title"><%= @ship.name %>'s Jobs</h1>
+<%= render :partial => "./jobs/show", locals:{jobs: @jobs} %>

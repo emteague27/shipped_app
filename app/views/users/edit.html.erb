@@ -1,0 +1,12 @@
+<div class="col-md-6">
+<h2 class="form-title">Edit User</h2>
+<%= form_for(@user, :class => "form form-horizontal") do |f| %>
+	<%= f.text_field :fname, value: @user.fname, :class => "form-control" %>
+	<%= f.text_field :lname, value: @user.lname, :class => "form-control" %>
+	<%= f.text_field :email, value: @user.email, :class => "form-control" %>
+	<%= f.text_field :password, value: @user.password, :class => "form-control" %>
+	<%= f.submit :"Update User", :class => "btn btn-info" %>
+<% end %>
+<br>
+<button class="btn btn-warning delete"><%= link_to "Delete Account", user_path(@user), method: :delete %></button>
+</div>

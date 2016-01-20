@@ -1,0 +1,13 @@
+<div class="col-md-8 allusers">
+<h2 class="form-title">All RumRunnerz</h2>
+
+<div class="col-md-12">
+<% @users.each do |user| %>
+	<div id="userbox">
+		<h2><%= link_to(user) do %></h2>
+		<h2><%= user.fname %></h2>
+		<% end %>
+		<h3><%= user.email %></h3>
+	</div>
+<% end %>
+</div>

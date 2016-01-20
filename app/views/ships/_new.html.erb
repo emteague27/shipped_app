@@ -1,0 +1,13 @@
+
+<h2 class="form-title new-ship">New Ship</h2>
+<div class="col-md-2 new-ship">
+<%= form_for(@ship, :class => "form-horizontal") do |f| %>
+	<%= f.text_field :name, placeholder: "Name", :class => "form-control" %>
+	<%= f.text_field :length, placeholder: "Length", :class => "form-control" %>
+	<%= f.text_field :ship_type, placeholder: "Ship Type", :class => "form-control" %>
+	<%= f.text_field :container_no, placeholder: "Containers", :class => "form-control" %>
+	<%= f.select(:location, [['Port Royal'], ['Tortuga'], ['St.Marys Island'], ['Clew Bay'], ['New Providence'], ['Barataria Bay']], :class => "drop-down") %><br>
+	<%= f.submit "Add Ship", :class => "btn btn-primary" %>
+<% end %>
+</div>
+

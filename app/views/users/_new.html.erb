@@ -1,0 +1,11 @@
+<h2 id="signup-title">Sign Up</h2>
+
+<div class="signup">
+<%= form_for(@user, :class => " form form-horizontal") do |f| %>
+	<%= f.text_field :fname, placeholder: "First Name", :class => "input-su" %>
+	<%= f.text_field :lname, placeholder: "Last Name", :class => "input-su" %>
+	<%= f.text_field :email, placeholder: "Email", :class => "input-su" %>
+	<%= f.password_field :password, placeholder: "Password", :class => "input-su"%>
+	<%= f.submit :"Create User", :class => "btn btn-warning input-su" %>
+<% end %>
+</div>

@@ -1,0 +1,34 @@
+<h1 id="welcome" class="col-md-12">Welcome,<br> <%= @user.fname %></h1>
+
+<%= render 'ships/new' %>
+
+<h2 class="table-title">My Ships</h2>
+<div class="col-md-8 shiptable">
+<table class="table table-striped table-bordered">
+	<thead>
+		<tr>
+			<th>Ship Name</th>
+			<th>Ship Type</th>
+			<th>Length (ft)</th>
+			<th>Location</th>
+			<th>Container Capacity</th>
+			<th>Actions</th>
+			<th>Jobs</th>
+		</tr>
+	</thead>
+	<tbody>
+<% @ships.each do |ship| %>
+	<tr>
+		<td><%= ship.name %></td>
+		<td><%= ship.ship_type %></td>
+		<td><%= ship.length %></td>
+		<td><%= ship.location %></td>
+		<td><%= ship.container_no %></td>
+		<td><%= link_to "Edit", edit_ship_path(ship.id) %> <%= link_to "Delete", ship_path(ship.id), method: :delete %></td>
+		<td><%= link_to "View Jobs", ship_path(ship.id) %></td>
+
+<% end %>
+	</tr>
+	</tbody>
+</table>
+</div>

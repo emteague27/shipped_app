@@ -1,0 +1,15 @@
+<h1 class="form-title">Edit a Job</h1>
+
+<div class="col-md-4">
+<%= form_for(@job, :class => "form-horizontal") do |f| %>
+	<%= f.text_field :ship_name, value: @ship.name, :disabled => true, :class => "form-control" %>
+	<%= f.text_field :job_name, placeholder: "Job Name", :class => "form-control" %>
+	<%= f.text_field :current_location, value: @ship.location, :readonly => true, :class => "form-control" %> 
+	<%= f.select(:destination, [['Port Royal'], ['Tortuga'], ['St.Marys Island'], ['Clew Bay'], ['New Providence'], ['Barataria Bay']], :class => "form-control") %><br>
+	<%= f.text_field :containers_needed, placeholder: "Containers Needed", :class => "form-control" %>
+	<%= f.text_field :cost, placeholder: "Cost", :class => "form-control"%>
+	<%= f.text_area :cargo, placeholder: "Cargo", :class => "form-control" %>
+	<%= f.submit "Edit Job", method: :update, :class => "btn btn-info" %>
+<% end %>
+</div>
+

@@ -1,0 +1,133 @@
+select{
+	width: 100%;
+	height: 40px !important;
+}
+body{
+	background: url("/islandstorm.jpg") center center fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.dropdown-toggle{
+	background-color: transparent;
+	border: none;
+	float: right;
+	padding-right: 25%;
+}
+.navlinks{
+	color: white;
+	font-size: 20px;
+}
+.navlinkbox{
+	margin-bottom: 4%;
+}
+/*home#home*/
+#sitename{
+	font-family: 'Finger Paint', cursive;
+	font-size: 70px;
+	color: #F29B21;
+	text-shadow: 1px 1px white,
+		1px -1px white,
+		-1px 1px white,
+		-1px -1px white;
+}
+.login-link, .signup-link{
+	color: #FF7070;
+	font-size: 35px;
+	font-family: 'Amaranth', sans-serif;
+	padding-left: 5%;
+	text-shadow: 1px 1px white,
+		1px -1px white,
+		-1px 1px white,
+		-1px -1px white;
+}
+.signup-show, .login-show{
+	display: none;
+}
+
+/*session#new*/
+.input{
+	width: 40%;
+	height: 45px;
+	margin-left: 10%;
+}
+#login-title, #signup-title{
+	color: #FF7070;
+	font-size: 45px; 
+	font-family: 'Amaranth', sans-serif;
+	text-shadow: 1px 1px white,
+		1px -1px white,
+		-1px 1px white,
+		-1px -1px white;
+	margin-left: 10%;
+	margin-top: 6%;
+}
+
+/*users#new*/
+.input-su{
+	width: 40%;
+	height: 45px;
+	margin-left: 10%;
+}
+/*home#index*/
+.table {
+  background-color: #dff0d8;
+}
+.new-ship{
+	margin-left: 3%;
+	margin-right: 5%;
+}
+.table-title{
+	margin-left: 26%;
+	color: #F29B21;
+	font-family: 'Amaranth', sans-serif;
+	font-size: 40px;
+	text-shadow: 1px 1px white,
+		1px -1px white,
+		-1px 1px white,
+		-1px -1px white;	
+}
+.shiptable{
+	height: 400px;
+	overflow: scroll;
+}
+/*rendered from ships#new*/
+.form-title{
+	color: #F29B21;
+	font-family: 'Amaranth', sans-serif;
+	padding-left: 1%;
+	text-shadow: 1px 1px #124E78,
+		1px -1px #124E78,
+		-1px 1px #124E78,
+		-1px -1px #124E78;
+}
+#welcome{
+	color:  #FF7070;
+	font-family: 'Marck Script', cursive;
+	font-size: 55px;
+	font-weight: 900;
+	margin-right: 64%;
+	margin-bottom: 5%;
+	text-shadow: 1px 1px white,
+		1px -1px white,
+		-1px 1px white,
+		-1px -1px white;
+	width: 30%;
+}
+/*ships#index*/
+.allships{
+	width: 85%;
+	margin-left: 7%;
+	height: 500px;
+	overflow: scroll;
+}
+/*users#index*/
+#userbox{
+	font-family: 'Righteous', cursive;
+	background-color: #84FF66;
+	border: 1px solid white;
+	width: 35%;
+	float: left;
+	margin-left: 5%;
+	text-align: center;
+	margin-bottom: 5%;
+}

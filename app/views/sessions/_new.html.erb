@@ -1,0 +1,9 @@
+<h2 id="login-title">Log In</h2>
+
+<div class="col-md-8 login">
+<%= form_tag(sessions_new_path, method: :post) do %>
+	<%= text_field_tag :email, placeholder="email", :class => "input" %>
+	<%= password_field_tag :password, placeholder="password", :class => "input" %>
+	<%= submit_tag "Log In", :class => "btn btn-warning input" %>
+<% end %>
+</div>
