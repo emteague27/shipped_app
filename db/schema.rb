@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160122200456) do
+ActiveRecord::Schema.define(version: 20160124194430) do
 
   create_table "jobs", force: :cascade do |t|
     t.string   "current_location"
@@ -28,20 +28,11 @@ ActiveRecord::Schema.define(version: 20160122200456) do
 
   add_index "jobs", ["ship_id"], name: "index_jobs_on_ship_id"
 
-  create_table "locations", force: :cascade do |t|
-    t.string   "local_name"
+  create_table "relationships", force: :cascade do |t|
+    t.integer  "user_id"
     t.integer  "ship_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  add_index "locations", ["ship_id"], name: "index_locations_on_ship_id"
-
-  create_table "relationships", force: :cascade do |t|
-    t.integer  "follower_id"
-    t.integer  "followed_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
   end
 
   create_table "ships", force: :cascade do |t|

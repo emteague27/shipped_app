@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
 	has_many :ships
-	has_many :relationships, foreign_key: :followed_id
-	has_many :followed, through: :relationships, source: :followed
+	has_many :relationships, foreign_key: :ship_id
+	has_many :followed, through: :relationships, source: :ship
 
 	validates_uniqueness_of :email
 	has_secure_password

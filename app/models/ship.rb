@@ -3,7 +3,7 @@ class Ship < ActiveRecord::Base
   has_many :jobs
 
   has_many :relationships, foreign_key: :user_id
-  has_many :followers, through: :relationships, source: :follower
+  has_many :followers, through: :relationships, source: :user
 
   validates_presence_of :name, :length, :ship_type, :container_no, :location
   validates_uniqueness_of :name 
