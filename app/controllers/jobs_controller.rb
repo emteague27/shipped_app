@@ -9,7 +9,7 @@ class JobsController < ApplicationController
   def create
     @job = Job.create(job_params)
     if @job.save
-      redirect_to home_index_path
+      redirect_to :back
     else
       flash[:notice] = "Please make sure your job name has not been used and Try Again."
       redirect_to :back
@@ -38,7 +38,7 @@ class JobsController < ApplicationController
   def destroy
     @job = Job.find(params[:id])
     if @job.delete
-      redirect_to home_index_path
+      redirect_to :back
     else
       redirect_to :back
     end

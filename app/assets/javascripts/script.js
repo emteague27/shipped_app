@@ -10,4 +10,6 @@ $(document).ready(function(){
 		$('.signup-show').show();
 	});
 
+	local.refresh
+
 });

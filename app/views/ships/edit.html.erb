@@ -1,6 +1,7 @@
 <h2 class="form-title">Edit Ship</h2>
 <div class="col-md-4">
-<%= form_for(@ship, :class => "form-horizontal") do |f| %>
+<%= form_for(@ship, :html=> {:multipart => true}, :class => "form-horizontal") do |f| %>
+	<%= f.file_field :avatar %>
 	<%= f.text_field :name, placeholder: "Name", :class => "form-control" %>
 	<%= f.text_field :length, placeholder: "Length", :class => "form-control" %>
 	<%= f.text_field :ship_type, placeholder: "Ship Type", :class => "form-control" %>

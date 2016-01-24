@@ -3,6 +3,7 @@
 <table class="table table-striped table-bordered">
 	<thead>
 		<tr>
+			<th>Ship</th>
 			<th>Ship Name</th>
 			<th>Owner Email</th>
 			<th>Ship Type</th>
@@ -16,13 +17,14 @@
 	<tbody>
 <% @ships.each do |ship| %>
 	<tr>
+		<td><%= image_tag ship.avatar.url(:thumb) %></td>
 		<td><%= ship.name %></td>
 		<td><%= ship.user.email %></td>
 		<td><%= ship.ship_type %></td>
 		<td><%= ship.length %></td>
 		<td><%= ship.location %></td>
 		<td><%= ship.container_no %></td>
-		<td><%= link_to "Edit", edit_ship_path(ship.id) %> <%= link_to "Delete", ship_path(ship.id), method: :delete %></td>
+		<td><%= link_to "Edit", edit_ship_path(ship.id) %> <%= link_to "Delete", ship_path(ship.id), method: :delete %> <%= link_to "Follow", relationship_path(ship.id), mehtod: :post if ship.user != current_user %></td>
 		<td><%= link_to "View Jobs", ship_path(ship.id) %></td>
-
+	</tr>
 <% end %>

@@ -1,6 +1,7 @@
 <div class="col-md-6">
 <h2 class="form-title">Edit User</h2>
-<%= form_for(@user, :class => "form form-horizontal") do |f| %>
+<%= form_for(@user, :html=> {:multipart => true}, :class => "form form-horizontal") do |f| %>
+	<%= f.file_field :avatar %>
 	<%= f.text_field :fname, value: @user.fname, :class => "form-control" %>
 	<%= f.text_field :lname, value: @user.lname, :class => "form-control" %>
 	<%= f.text_field :email, value: @user.email, :class => "form-control" %>

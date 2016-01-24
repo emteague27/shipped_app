@@ -7,6 +7,9 @@ body{
 	background-size: cover;
 	background-repeat: no-repeat;
 }
+::-webkit-scrollbar{
+	display: none;
+}
 .dropdown-toggle{
 	background-color: transparent;
 	border: none;
@@ -70,14 +73,15 @@ body{
 }
 /*home#index*/
 .table {
-  background-color: #dff0d8;
+  background-color: #C6FAFF;
 }
 .new-ship{
 	margin-left: 3%;
 	margin-right: 5%;
 }
 .table-title{
-	margin-left: 26%;
+	margin-top: -45%;
+	margin-left: 10%;
 	color: #F29B21;
 	font-family: 'Amaranth', sans-serif;
 	font-size: 40px;
@@ -86,7 +90,11 @@ body{
 		-1px 1px white,
 		-1px -1px white;	
 }
+.image{
+	margin-left: 2%;
+}
 .shiptable{
+	margin-left: 8%;
 	height: 400px;
 	overflow: scroll;
 }
@@ -106,7 +114,7 @@ body{
 	font-size: 55px;
 	font-weight: 900;
 	margin-right: 64%;
-	margin-bottom: 5%;
+	margin-bottom: 1%;
 	text-shadow: 1px 1px white,
 		1px -1px white,
 		-1px 1px white,
@@ -130,4 +138,22 @@ body{
 	margin-left: 5%;
 	text-align: center;
 	margin-bottom: 5%;
+	overflow: scroll;
+}
+/*users#show*/
+.profile-pic{
+	margin-right: 2%;
+}
+.profileshiptable{
+	
+}
+.profile-table-title{
+	margin-top: 10%;
+	color: #F29B21;
+	font-family: 'Amaranth', sans-serif;
+	font-size: 40px;
+	text-shadow: 1px 1px white,
+		1px -1px white,
+		-1px 1px white,
+		-1px -1px white;
 }

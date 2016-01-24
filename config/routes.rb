@@ -10,10 +10,13 @@ Rails.application.routes.draw do
 
   post '/ships/1' => 'jobs#create'
 
+  get '/follow' => 'relationships#index', as: :follow
+
   root 'home#home'
   resources :users
   resources :ships
   resources :jobs
+  resources :relationships
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

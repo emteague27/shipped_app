@@ -1,12 +1,16 @@
 <h1 id="welcome" class="col-md-12">Welcome,<br> <%= @user.fname %></h1>
+<div class="image"><%= image_tag @user.avatar.url(:medium) %></div>
 
 <%= render 'ships/new' %>
+</div>
 
+<div class="col-md-7">
 <h2 class="table-title">My Ships</h2>
-<div class="col-md-8 shiptable">
+<div class="col-md-12 shiptable">
 <table class="table table-striped table-bordered">
 	<thead>
 		<tr>
+			<th>Ship</th>
 			<th>Ship Name</th>
 			<th>Ship Type</th>
 			<th>Length (ft)</th>
@@ -19,6 +23,7 @@
 	<tbody>
 <% @ships.each do |ship| %>
 	<tr>
+		<td><%= image_tag ship.avatar.url(:thumb) %> </td>
 		<td><%= ship.name %></td>
 		<td><%= ship.ship_type %></td>
 		<td><%= ship.length %></td>
@@ -31,4 +36,5 @@
 	</tr>
 	</tbody>
 </table>
+</div>
 </div>
